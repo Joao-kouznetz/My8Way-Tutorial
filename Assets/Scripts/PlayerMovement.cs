@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         audio = GetComponent<AudioSource>();
+        TimePassed.instance.Start();
     }
 
     // Update is called once per frame
@@ -21,6 +22,8 @@ public class PlayerMovement : MonoBehaviour
         float movimentoVertical = Input.GetAxis("Vertical");
         Vector2 movement = new Vector2(movimentoHorizontal, movimentoVertical);
         rb.MovePosition(rb.position + movement.normalized * speed * Time.fixedDeltaTime);
+        TimePassed.instance.TimePassedMethod();
+        Debug.Log("time: " + TimePassed.instance.timePassed.ToString());
     }
 
     void OnTriggerEnter2D(Collider2D other)

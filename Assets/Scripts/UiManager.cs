@@ -4,6 +4,7 @@ public class UiManager : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public GameObject endgamePanel;
+    public GameObject estaticsPanel;
     void Start()
     {
 
@@ -15,6 +16,8 @@ public class UiManager : MonoBehaviour
         if (GameController.isGameOver == true)
         {
             endgamePanel.SetActive(true);
+            estaticsPanel.SetActive(false);
+
         }
 
     }
