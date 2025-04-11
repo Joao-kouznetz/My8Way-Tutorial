@@ -8,7 +8,7 @@ public class TimePassed : MonoBehaviour
     // private Text leastTimeText;
 
     public float timePassed = 0.0f;
-    float leastTimePasset = 10.0f;
+    // float leastTimePasset = 10.0f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Awake()
     {
